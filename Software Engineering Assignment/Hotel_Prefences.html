@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Preferences</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+  function saveHotelValues()
+  {
+    localStorage._ucheckin1=document.getElementById("checkin1").value;
+    localStorage._ucheckout1=document.getElementById("checkout1").value;
+    localStorage._uguests1=document.getElementById("guests1").value;
+    var myText = "Hotels Available.";
+    alert (myText);
+  }
+
+  function loadHotelValues()
+  {
+    document.getElementById("checkin1").value=localStorage._ucheckin1;
+    document.getElementById("checkout1").value=localStorage._ucheckout1;
+    document.getElementById("guests1").value=localStorage._uguests1;
+  }
+
+  function saveHotelValues1()
+  {
+    localStorage._ucheckin2=document.getElementById("checkin2").value;
+    localStorage._ucheckout2=document.getElementById("checkout2").value;
+    localStorage._uguests2=document.getElementById("guests2").value;
+    var myText = "All types of rooms available.";
+    alert (myText);
+  }
+
+  function loadHotelValues1()
+  {
+    document.getElementById("checkin2").value=localStorage._ucheckin2;
+    document.getElementById("checkout2").value=localStorage._ucheckout2;
+    document.getElementById("guests2").value=localStorage._uguests2;
+  }
+
+  function parseDate(str) 
+  {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+  }
+
+  function datediff1() 
+  {
+    var first = document.getElementById("checkin2").value;
+    var second = document.getElementById("checkout2").value;
+    var day = Math.round((parseDate(second)-parseDate(first))/(1000*60*60*24));
+    var cost = 5000*day;
+    alert("Amount Payable: "+cost);
+  }
+
+  function datediff2() 
+  {
+    var first = document.getElementById("checkin2").value;
+    var second = document.getElementById("checkout2").value;
+    var day = Math.round((parseDate(second)-parseDate(first))/(1000*60*60*24));
+    var cost = 10000*day;
+    alert("Amount Payable: "+cost);
+  }
+
+  function datediff3() 
+  {
+    var first = document.getElementById("checkin2").value;
+    var second = document.getElementById("checkout2").value;
+    var day = Math.round((parseDate(second)-parseDate(first))/(1000*60*60*24));
+    var cost = 15000*day;
+    alert("Amount Payable: "+cost);
+  }
+
+</script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+
+.footer {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background:white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    display: flex;
+}
+
+.box {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background:  #FEE715FF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.footerBox {
+    margin: auto;
+}
+
+p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+}
+.add {
+    margin-left: 200px;
+}
+
+.registerbtn {
+  background-color: red;
+  color: white;
+  padding: 16px 10px;
+  margin: 28px 40px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  height: 20%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 100;
+}
+
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>Welcome</a>
+  <a href="website.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+  <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
+  <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+  <a href="Car_Preferences.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Car Preferences</a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="https://www.shivavilaspalacehotel.com/images/homepage/39.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="100%">
+  <div class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="w3-container w3-red">
+      <h2><i class="fa fa-bed w3-margin-right"></i>Welcome to Sikkim</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Check In</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD/MM/YYYY" name="CheckIn" id= "checkin1" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-calendar-o"></i> Check Out</label>
+            <input class="w3-input w3-border" type="text" placeholder="DD/MM/YYYY" name="CheckOut" id= "checkout1" required>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-male"></i> Guests</label>
+            <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6" id= "guests1">
+          </div>
+        </div>
+        <button onclick="saveHotelValues()" class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+        <button onclick="loadHotelValues()" type="submit" class="registerbtn">Already Staying? Need another room?</button>
+    </div>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1532px;">
+
+  <div class="w3-container w3-margin-top" id="rooms">
+    <h3>Rooms</h3>
+    <p>Make yourself at home is our slogan. We offer the best rooms in Sikkim. Enjoy your stay here.</p>
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> Check In</label>
+      <input class="w3-input w3-border" type="text" placeholder="DD/MM/YYYY" id="checkin2">
+    </div>
+    <div class="w3-col m3">
+      <label><i class="fa fa-calendar-o"></i> Check Out</label>
+      <input class="w3-input w3-border" type="text" placeholder="DD/MM/YYYY" id="checkout2">
+    </div>
+    <div class="w3-col m2">
+      <label><i class="fa fa-male"></i> Guests</label>
+      <input class="w3-input w3-border" type="number" placeholder="1" id="guests2">
+    </div>
+    <div class="w3-col m2">
+      <label><i class="fa fa-search"></i> Search</label>
+      <button onclick="saveHotelValues1()" class="w3-button w3-block w3-black">Search</button>
+    </div>
+    <div class="w3-col m2">
+      <label><i class="fa fa-search"></i> Another Booking?</label>
+      <button onclick="loadHotelValues1()" class="w3-button w3-block w3-black">Already Staying?</button>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-padding-16">
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://www.w3schools.com/w3images/room_single.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Single Room</h3>
+        <h6 class="w3-opacity">From 5000 ₹</h6>
+        <p>Single bed</p>
+        <p>15m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="datediff1()">Choose Room</button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://www.w3schools.com/w3images/room_double.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Double Room</h3>
+        <h6 class="w3-opacity">From 10,000 ₹</h6>
+        <p>Queen-size bed</p>
+        <p>25m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="datediff2()">Choose Room</button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://www.w3schools.com/w3images/room_deluxe.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Deluxe Room</h3>
+        <h6 class="w3-opacity">From 15,000 ₹</h6>
+        <p>King-size bed</p>
+        <p>40m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="datediff3()">Choose Room</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" id="about">
+    <div class="w3-col l4 12">
+      <h3>About</h3>
+      <h6>Our hotels are one of a kind. It is truely an amazing experience staying here. Help us serve you better.</h6>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    </div>
+    <div class="w3-col l8 12">
+      <!-- Image of location/map -->
+      <img src="https://i.pinimg.com/originals/25/57/db/2557dbdaeeaa178f550bf615b2be8347.jpg" class="w3-image w3-greyscale" style="width:100%;">
+    </div>
+  </div>
+  
+  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> SMIT, Rangpo, Sikkim</div>
+    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +91 9382357146</div>
+    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: harsh22.01.2001@gmail.com</div>
+  </div>
+
+  <div class="w3-panel w3-red w3-leftbar w3-padding-32">
+    <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> On demand, we can offer extra beds, barbecue, dog equipment, sauna, etc.</h6>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <div class="box footerBox">
+      <p>Made with ❤️ by Harsh, Muksam, Pallav and Siddharth</p>
+      <p>Sec C | CSE | 5th Semester | SMIT</p>
+    </div>
+  </footer>
+
+</body>
+</html>

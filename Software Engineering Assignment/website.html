@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+  .footer {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background:white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    display: flex;
+}
+
+.box {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background:  #FEE715FF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.footerBox {
+    margin: auto;
+}
+
+p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+}
+.add {
+    margin-left: 200px;
+}
+.center {
+  margin: auto;
+  width: 32%;
+}
+</style>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="Registration_Form.html" class="w3-button w3-bar-item">Register Again</a>
+  <a href="Car_Preferences.html" class="w3-button w3-bar-item">Car Preference</a>
+  <a href="Hotel_Prefences.html" class="w3-button w3-bar-item">Hotel Preference</a>
+  <a href="Contact_Us.html" class="w3-button w3-bar-item">Contact Us</a>
+  <a href="#contact" class="w3-button w3-bar-item">Map of Sikkim</a>
+  <a href="#contact" class="w3-button w3-bar-item">Seeing Places</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="https://www.itl.cat/pngfile/big/317-3178516_red-panda-hd-wallpapers-red-panda-hd.jpg"
+  style="width:100%">
+  <img class="mySlides" src="https://images.unsplash.com/photo-1490650404312-a2175773bbf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+  style="width:100%">
+  <img class="mySlides" src="https://news.cgtn.com/news/3d496a4e3555544d/img/d356db76-b562-4108-9712-e06b1eb676f2.jpg"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Welcome to Sikkim</h2>
+  <p class="w3-opacity"><i>Help us serve you better</i></p>
+  <p class="w3-justify">We provide cab services, hotels at the best prices available, so that you have an amazing stay here and don't need to worry about anything.</p>
+</section>
+
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <h2 class="w3-wide">Meet the founders</h2>
+  <div class="w3-third">
+    <p>Harsh</p>
+    <img src="https://avatars3.githubusercontent.com/u/51717617?s=460&u=70d7fe8089400f904e068594dd4e3b66bf8aa0b3&v=4" alt="Random Name" style="width:75%">
+    <p>An explorer.</p>
+  </div>
+  <article class="w3-third">
+    <p>Muksam Limboo</p>
+    <img src="https://avatars2.githubusercontent.com/u/34718451?s=460&u=747ccbba4f4c1f8ffc53f9c130ac80ca896bd4e4&v=4" alt="Random Name" style="width:75%">
+    <p>The geek.</p>
+  </article>
+  <article class="w3-third">
+    <p>Pallav Bishi</p>
+    <img src="https://avatars3.githubusercontent.com/u/40256573?s=460&u=46e6d73050e8aef531f749c88c71de480f10c025&v=4" alt="Random Name" style="width:75%">
+    <p>The observer.</p>
+  </article>
+  <div class="center">
+    <p>Siddharth Chhetri</p>
+    <img src="https://avatars2.githubusercontent.com/u/60280662?s=460&u=9099b6614c0bb2e391963cb233cb856da365db8c&v=4" alt="Random Name" style="width:75%">
+    <p>The expert.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <div class="box footerBox">
+    <p>Made with ❤️ by Harsh, Muksam, Pallav and Siddharth</p>
+    <p>Sec C | CSE | 5th Semester | SMIT</p>
+  </div>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
+
