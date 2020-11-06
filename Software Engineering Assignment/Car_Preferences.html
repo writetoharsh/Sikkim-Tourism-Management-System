@@ -1,133 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Car Preferences</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
-  function saveCarsValues()
-  {
-    localStorage._ustart=document.getElementById("start").value;
-    localStorage._uend=document.getElementById("end").value;
-    localStorage._upass=document.getElementById("pass").value;
-    var myText = "Cars Available.";
-    alert (myText);
-  }
+  <title>Car Preferences</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  function loadCarsValues()
-  {
-    document.getElementById("start").value=localStorage._ustart;
-    document.getElementById("end").value=localStorage._uend;
-    document.getElementById("pass").value=localStorage._upass;
-  }
+  <link rel="stylesheet" href="assets/css/w3.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/main-style.css">
 
-  function parseDateCar(str) 
-  {
-    var mdy = str.split('/');
-    return new Date(mdy[2], mdy[0]-1, mdy[1]);
-  }
-
-  function costdiff1() 
-  {
-    var first = document.getElementById("start").value;
-    var second = document.getElementById("end").value;
-    var day = Math.round((parseDateCar(second)-parseDateCar(first))/(1000*60*60*24));
-    var cost = 4000*day;
-    alert("Amount Payable: "+cost);
-  }
-
-  function costdiff2() 
-  {
-    var first = document.getElementById("start").value;
-    var second = document.getElementById("end").value;
-    var day = Math.round((parseDateCar(second)-parseDateCar(first))/(1000*60*60*24));
-    var cost = 2000*day;
-    alert("Amount Payable: "+cost);
-  }
-
-  function costdiff3() 
-  {
-    var first = document.getElementById("start").value;
-    var second = document.getElementById("end").value;
-    var day = Math.round((parseDateCar(second)-parseDateCar(first))/(1000*60*60*24));
-    var cost = 2400*day;
-    alert("Amount Payable: "+cost);
-  }
-</script>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-
-.footer {
-    max-width: 400px;
-    margin: 0px auto -1%;
-    background:white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-    align-items: center;
-    display: flex;
-}
-
-.box {
-    max-width: 400px;
-    margin: 0px auto -1%;
-    background:  #FEE715FF;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-}
-
-.footerBox {
-    margin: auto;
-}
-
-p {
-    margin: 0;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 200;
-    color: #00204a;
-}
-.add {
-    margin-left: 200px;
-}
-
-.registerbtn {
-  background-color: black;
-  color: white;
-  padding: 16px 10px;
-  margin: 28px 40px;
-  border: none;
-  cursor: pointer;
-  width: 60%;
-  height: 20%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity: 100;
-}
-
-</style>
 </head>
+
 <body class="w3-light-grey">
 
-<!-- Navigation Bar -->
-<div class="w3-bar w3-white w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-black w3-mobile">Welcome</a>
-  <a href="#cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
-  <a href="#about" class="w3-bar-item w3-button w3-mobile">Our Drivers</a>
-  <a href="Hotel_Prefences.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Hotel Preferences</a>
-</div>
-<!-- Header -->
-<header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="https://wallpaperstock.net/road-sea-hills_wallpapers_42043_1920x1080.jpg" alt="The Hotel" style="min-width:1000px" width="100%" height="100%">
-  <div class="w3-display-left w3-padding w3-col l6 m8">
-    <div class="w3-container w3-black">
-      <h2>Check Car Availability</h2>
-    </div>
-    <div class="w3-container w3-white w3-padding-16">
+  <!-- Navigation Bar -->
+  <div class="w3-bar w3-white w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-black w3-mobile">Welcome</a>
+    <a href="#cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
+    <a href="#about" class="w3-bar-item w3-button w3-mobile">Our Drivers</a>
+    <a href="Hotel_Prefences.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Hotel Preferences</a>
+  </div>
+  <!-- Header -->
+  <header class="w3-display-container w3-content" style="max-width:1500px;">
+    <img class="w3-image" src="https://wallpaperstock.net/road-sea-hills_wallpapers_42043_1920x1080.jpg" alt="The Hotel"
+      style="min-width:1000px" width="100%" height="100%">
+    <div class="w3-display-left w3-padding w3-col l6 m8">
+      <div class="w3-container w3-black">
+        <h2>Check Car Availability</h2>
+      </div>
+      <div class="w3-container w3-white w3-padding-16">
         <div class="w3-row-padding" style="margin:0 -16px;">
           <div class="w3-half w3-margin-bottom">
             <label><i class="fa fa-calendar-o"></i> Start Trip</label>
@@ -144,88 +46,146 @@ p {
             <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6" id="pass">
           </div>
         </div>
-        <button class="w3-button w3-dark-grey" type="submit" onclick="saveCarsValues()"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
+        <button class="w3-button w3-dark-grey" type="submit" onclick="saveCarsValues()"><i
+            class="fa fa-search w3-margin-right"></i> Search availability</button>
         <button onclick="loadCarsValues()" type="submit" class="registerbtn">Booked a car before? Need another?</button>
-    </div>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1532px;">
-
-  <div class="w3-container w3-margin-top" id="cars">
-    <h3>Cars</h3>
-    <p>Choose a vehicle from our best in class Hatchbacks, Sedans, and SUVs. We provide the best in class comfort.</p>
-  </div>
-  <form action="Checkout.html" method="post">
-  <div class="w3-row-padding w3-padding-16">
-    <div class="w3-third w3-margin-bottom">
-      <img src="https://www.motorbeam.com/wp-content/uploads/Toyota-Innova-Crysta-1.jpg" alt="Innova Crysta" style="width:100%">
-      <div class="w3-container w3-white">
-        <h3>Toyota Innova Crysta</h3>
-        <h6 class="w3-opacity">4000 ₹</h6>
-        <p>SUV</p>
-        <p>5 seater</p>
-        <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-        <button onclick="costdiff1()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
       </div>
     </div>
-    <div class="w3-third w3-margin-bottom">
-        <img src="https://img.gaadicdn.com/images/carexteriorimages/930x620/Maruti/Maruti-Wagon-R/6741/1548249320425/side-view-(right)-38.jpg" alt="Wagon R" style="width:100%">
-        <div class="w3-container w3-white">
-          <h3>Maruti Suzuki Wagon-R</h3>
-          <h6 class="w3-opacity">2000 ₹</h6>
-          <p>Hatchback</p>
-          <p>5 seater</p>
-          <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-          <button onclick="costdiff2()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
+  </header>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1532px;">
+
+    <div class="w3-container w3-margin-top" id="cars">
+      <h3>Cars</h3>
+      <p>Choose a vehicle from our best in class Hatchbacks, Sedans, and SUVs. We provide the best in class comfort.</p>
+    </div>
+    <form action="Checkout.html" method="post">
+      <div class="w3-row-padding w3-padding-16">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://www.motorbeam.com/wp-content/uploads/Toyota-Innova-Crysta-1.jpg" alt="Innova Crysta"
+            style="width:100%">
+          <div class="w3-container w3-white">
+            <h3>Toyota Innova Crysta</h3>
+            <h6 class="w3-opacity">4000 ₹</h6>
+            <p>SUV</p>
+            <p>5 seater</p>
+            <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i
+                class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+            <button onclick="costdiff1()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img
+            src="https://img.gaadicdn.com/images/carexteriorimages/930x620/Maruti/Maruti-Wagon-R/6741/1548249320425/side-view-(right)-38.jpg"
+            alt="Wagon R" style="width:100%">
+          <div class="w3-container w3-white">
+            <h3>Maruti Suzuki Wagon-R</h3>
+            <h6 class="w3-opacity">2000 ₹</h6>
+            <p>Hatchback</p>
+            <p>5 seater</p>
+            <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i
+                class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+            <button onclick="costdiff2()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://i2.wp.com/gomechanic.in/blog/wp-content/uploads/2019/12/Ciaz.jpeg?fit=1920%2C1080&ssl=1"
+            alt="Ciaz" style="width:100%">
+          <div class="w3-container w3-white">
+            <h3>Maruti Suzuki Ciaz</h3>
+            <h6 class="w3-opacity">2400 ₹</h6>
+            <p>Sedan</p>
+            <p>4 seater</p>
+            <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i
+                class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+            <button onclick="costdiff3()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
+          </div>
         </div>
       </div>
-      <div class="w3-third w3-margin-bottom">
-        <img src="https://i2.wp.com/gomechanic.in/blog/wp-content/uploads/2019/12/Ciaz.jpeg?fit=1920%2C1080&ssl=1" alt="Ciaz" style="width:100%">
-        <div class="w3-container w3-white">
-          <h3>Maruti Suzuki Ciaz</h3>
-          <h6 class="w3-opacity">2400 ₹</h6>
-          <p>Sedan</p>
-          <p>4 seater</p>
-          <p class="w3-large"><i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-          <button onclick="costdiff3()" class="w3-button w3-block w3-black w3-margin-bottom">Book Vehicle</button>
-        </div>
+    </form>
+
+    <div class="w3-row-padding" id="about">
+      <div class="w3-col l4 12">
+        <h3>Our Drivers</h3>
+        <h6>We have the best in class drivers, mostly retired NCOs from the Armed Forces our drivers have even served
+          the President of India and many other VIPs during their service. They know all the routes from Sikkim, to
+          Silliguri, to Darjeeling, to Kalimpong and to Kurseong.</h6>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
+            class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
       </div>
-  </div>
-  </form>
-
-  <div class="w3-row-padding" id="about">
-    <div class="w3-col l4 12">
-      <h3>Our Drivers</h3>
-      <h6>We have the best in class drivers, mostly retired NCOs from the Armed Forces our drivers have even served the President of India and many other VIPs during their service. They know all the routes from Sikkim, to Silliguri, to Darjeeling, to Kalimpong and to Kurseong.</h6>
-    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+      <div class="w3-col l8 12">
+        <!-- Image of location/map -->
+        <img src="https://resources.banknovo.com/wp-content/uploads/2019/10/Uber-Driver.jpg" style="width:100%;">
+      </div>
     </div>
-    <div class="w3-col l8 12">
-      <!-- Image of location/map -->
-      <img src="https://resources.banknovo.com/wp-content/uploads/2019/10/Uber-Driver.jpg" style="width:100%;">
+
+    <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+      <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> SMIT, Rangpo, Sikkim</div>
+      <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +91 9382357146</div>
+      <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: harsh22.01.2001@gmail.com</div>
     </div>
-  </div>
-  
-  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
-    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> SMIT, Rangpo, Sikkim</div>
-    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +91 9382357146</div>
-    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: harsh22.01.2001@gmail.com</div>
+
+    <div class="w3-panel w3-blue w3-leftbar w3-padding-32">
+      <h6><i class="fa fa-info w3-white w3-padding w3-margin-right"></i> On demand, we can offer baby seats, extra seat
+        belts, exquisite meals.</h6>
+    </div>
+    <!-- End page content -->
   </div>
 
-  <div class="w3-panel w3-blue w3-leftbar w3-padding-32">
-    <h6><i class="fa fa-info w3-white w3-padding w3-margin-right"></i> On demand, we can offer baby seats, extra seat belts, exquisite meals.</h6>
-  </div>
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
     <div class="box footerBox">
       <p>Made with ❤️ by Harsh, Muksam, Pallav and Siddharth</p>
       <p>Sec C | CSE | 5th Semester | SMIT</p>
     </div>
   </footer>
 
+
+  <script>
+    function saveCarsValues() {
+      localStorage._ustart = document.getElementById("start").value;
+      localStorage._uend = document.getElementById("end").value;
+      localStorage._upass = document.getElementById("pass").value;
+      var myText = "Cars Available.";
+      alert(myText);
+    }
+
+    function loadCarsValues() {
+      document.getElementById("start").value = localStorage._ustart;
+      document.getElementById("end").value = localStorage._uend;
+      document.getElementById("pass").value = localStorage._upass;
+    }
+
+    function parseDateCar(str) {
+      var mdy = str.split('/');
+      return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+    }
+
+    function costdiff1() {
+      var first = document.getElementById("start").value;
+      var second = document.getElementById("end").value;
+      var day = Math.round((parseDateCar(second) - parseDateCar(first)) / (1000 * 60 * 60 * 24));
+      var cost = 4000 * day;
+      alert("Amount Payable: " + cost);
+    }
+
+    function costdiff2() {
+      var first = document.getElementById("start").value;
+      var second = document.getElementById("end").value;
+      var day = Math.round((parseDateCar(second) - parseDateCar(first)) / (1000 * 60 * 60 * 24));
+      var cost = 2000 * day;
+      alert("Amount Payable: " + cost);
+    }
+
+    function costdiff3() {
+      var first = document.getElementById("start").value;
+      var second = document.getElementById("end").value;
+      var day = Math.round((parseDateCar(second) - parseDateCar(first)) / (1000 * 60 * 60 * 24));
+      var cost = 2400 * day;
+      alert("Amount Payable: " + cost);
+    }
+  </script>
 </body>
+
 </html>

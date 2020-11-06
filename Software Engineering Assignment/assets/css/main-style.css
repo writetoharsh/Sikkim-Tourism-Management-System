@@ -1,0 +1,79 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.carousel .carousel-item {
+    height: 650px;
+}
+
+.carousel h1 {
+    color: white;
+    font-weight: 800;
+    background-color: rgba(8, 86, 120, 0.564);
+    padding: 30px;
+    text-shadow: rgb(176, 110, 24) 5px 2px 10px;
+    border-radius: 30px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+
+.footer {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    display: flex;
+}
+
+.box {
+    max-width: 400px;
+    margin: 0px auto -1%;
+    background: #FEE715FF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.footerBox {
+    margin: auto;
+}
+
+p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+}
+
+.add {
+    margin-left: 200px;
+}
+
+.registerbtn {
+    background-color: black;
+    color: white;
+    padding: 16px 10px;
+    margin: 28px 40px;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    height: 20%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 100;
+}
