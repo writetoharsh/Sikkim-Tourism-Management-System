@@ -1,13 +1,29 @@
+<?php
+
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+
+sec_session_start();
+
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
+?>
 <!DOCTYPE html>
-
 <html>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/css/w3.css" />
-<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-<link rel="stylesheet" href="assets/css/main-style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Sikkim, The Land of Wonders</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/main-style.css" />
+
+</head>
 
 <body>
     <!-- Navigation -->
@@ -22,26 +38,26 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="3500">
+            <div class="carousel-item active" data-interval="4000">
                 <img src="assets/images/banner1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Have an amazing stay !</h1>
+                    <h3>Have an amazing stay !</h3>
                     <br>
                     <br>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="3500">
+            <div class="carousel-item" data-interval="4000">
                 <img src="assets/images/banner3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>We provide cab services</h1>
+                    <h3>We provide cab services</h3>
                     <br>
                     <br>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="3500">
+            <div class="carousel-item" data-interval="4000">
                 <img src="assets/images/banner2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Hotels at best prices</h1>
+                    <h3>Hotels at best prices</h3>
                     <br>
                     <br>
                 </div>
@@ -70,61 +86,64 @@
 
         <hr style="background-color: black;">
 
-        <div class="container text-center">
-            <button class="bg-warning p-2 rounded">
-                <h1 class="">Meet The Founders</h1>
-            </button>
-        </div>
-
-        <div class="card-deck text-center p-5 row">
-            <div class="card border-success mb-3 col-md-3" style="">
-                <div class="card-header bg-transparent border-success">
-                    <strong style="color:brown; font-size: 22px; text-shadow:yellow 3px 3px 10px">
-                        Harsh --
-                    </strong>
-                </div>
-                <img src="assets/images/avatar-harsh.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                </div>
-                <div class="card-footer bg-transparent border-success">An Explorer</div>
+        <div class="container bg-warning p-2 text-center rounded">
+            <div class="">
+                <h1 style="border-bottom: dotted 1px white; padding:20px;">Meet The Founders</h1>
             </div>
 
-            <div class="card border-success mb-3 col-md-3" style="">
-                <div class="card-header bg-transparent border-success">
-                    <strong style="color:black; font-size: 22px; text-shadow:yellow 3px 3px 10px">
-                        Muksam Limboo
-                    </strong>
-                </div>
-                <img src="assets/images/avatar-muksam.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                </div>
-                <div class="card-footer bg-transparent border-success">The Geek</div>
-            </div>
 
-            <div class="card border-success mb-3 col-md-3" style="">
-                <div class="card-header bg-transparent border-success">
-                    <strong style="color:blue; font-size: 22px; text-shadow:yellow 3px 3px 10px">Pallav Bishi</strong>
+            <div class="card-deck text-center p-5 row">
+                <div class="card border-success mb-3 col-md-3" style="">
+                    <div class="card-header bg-transparent border-success">
+                        <strong>
+                            Harsh --
+                        </strong>
+                    </div>
+                    <img src="assets/images/avatar-harsh.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">An Explorer</div>
                 </div>
-                <img src="assets/images/avatar-pallav.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                </div>
-                <div class="card-footer bg-transparent border-success">The Observer</div>
-            </div>
 
-            <div class="card border-success mb-3 col-md-3" style="">
-                <div class="card-header bg-transparent border-success">
-                    <strong style="color:grey; font-size: 22px; text-shadow:yellow 3px 3px 10px">
-                        Siddharth Chhetri
-                    </strong>
+                <div class="card border-success mb-3 col-md-3" style="">
+                    <div class="card-header bg-transparent border-success">
+                        <strong>
+                            Muksam Limboo
+                        </strong>
+                    </div>
+                    <img src="assets/images/avatar-muksam.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">The Geek</div>
                 </div>
-                <img src="assets/images/avatar-siddharth.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
+
+                <div class="card border-success mb-3 col-md-3" style="">
+                    <div class="card-header bg-transparent border-success">
+                        <strong>
+                            Pallav Bishi
+                        </strong>
+                    </div>
+                    <img src="assets/images/avatar-pallav.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">The Observer</div>
                 </div>
-                <div class="card-footer bg-transparent border-success">The Expert</div>
+
+                <div class="card border-success mb-3 col-md-3" style="">
+                    <div class="card-header bg-transparent border-success">
+                        <strong>
+                            Siddharth Chhetri
+                        </strong>
+                    </div>
+                    <img src="assets/images/avatar-siddharth.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">The Expert</div>
+                </div>
             </div>
         </div>
     </div>
@@ -141,25 +160,6 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
-    <script>
-    // Automatic Slideshow - change image every 3 seconds
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-            myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
-    }
-    </script>
 </body>
 
 </html>
