@@ -73,7 +73,7 @@ if (login_check($mysqli) == true) {
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group input-group col-md-6" style="padding-top:20px">
+                    <div class="form-group input-group col-md-5" style="padding-top:20px">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Password</span>
                         </div>
@@ -81,7 +81,7 @@ if (login_check($mysqli) == true) {
                             placeholder="Password">
                     </div>
 
-                    <div class="form-group input-group col-md-6" style="padding-top:20px">
+                    <div class="form-group input-group col-md-7" style="padding-top:20px">
                         <input type="password" name="confirmpwd" id="confirmpwd" class="form-control"
                             placeholder="Confirm Password">
                         <div class="input-group-append">
@@ -92,8 +92,8 @@ if (login_check($mysqli) == true) {
 
                 <div class="row">
                     <div class="text-center mb-3 col-md-12">
-                        <input type="button" value="Register" class="btn btn-success btn-block btn-rounded z-depth-1"
-                            onclick="return regformhash(this.form,
+                        <input type="button" value="Register"
+                            class="btn btn-lg btn-info btn-block btn-rounded z-depth-1" onclick="return regformhash(this.form,
                                                  this.form.username,
                                                  this.form.email,
                                                  this.form.password,
@@ -103,7 +103,7 @@ if (login_check($mysqli) == true) {
             </form>
 
             <div>
-                <p>Return to the <a href="login.php">login page</a>.</p>
+                <p>Already Have an Account? <a href="login.php">Login to your Account</a>.</p>
             </div>
         </div>
     </div>

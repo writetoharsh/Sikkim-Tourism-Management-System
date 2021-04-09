@@ -11,7 +11,7 @@ if (isset($_POST['username'], $_POST['p'])) {
 
     if (login($usrname, $password, $mysqli) == true) {
         // Login success
-        header("Location: ../users-area/dashboard.php");
+        header("Location: ../index.php");
         exit();
     } else {
         // Login failed

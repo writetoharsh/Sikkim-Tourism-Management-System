@@ -79,8 +79,8 @@ if (login_check($mysqli) == true) {
             <h1 class="">Welcome to Sikkim, The Land of Wonders!</h1>
             <p style="color:grey"><i>Help us serve you better</i></p>
             <p>
-                We provide cab services, hotels at the best prices available, so that
-                you have an amazing stay here and don't need to worry about anything.
+                We provide cab services, hotels at best prices. We assure
+                you, you'll have an amazing stay here. <br> No Worries. Enjoy your stay here!
             </p>
         </div>
 

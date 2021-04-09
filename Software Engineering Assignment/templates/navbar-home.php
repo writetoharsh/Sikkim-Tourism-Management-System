@@ -26,15 +26,18 @@ if(empty($logged))
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
-                    Preferences
+                    Booking
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Car Preference</a>
-                    <a class="dropdown-item" href="#">Hotel Preference</a>
+                    <!-- <a class="dropdown-item" href="./car_booking.php">Car Booking</a> -->
+                    <a class="dropdown-item" href="./Car_Preferences.html">Car Booking</a>
+                    <!-- <a class="dropdown-item" href="./hotel_booking.php">Hotel Booking</a> -->
+                    <a class="dropdown-item" href="./Hotel_Preferences.html">Hotel Booking</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-outline-warning" href="#">Contact Us</a>
+                <!-- <a class="nav-link btn btn-outline-warning" href="./contact_us.php">Contact Us</a> -->
+                <a class="nav-link btn btn-outline-warning" href="./Contact_Us.html">Contact Us</a>
             </li>
         </ul>
 

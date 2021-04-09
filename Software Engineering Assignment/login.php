@@ -17,7 +17,7 @@ if (login_check($mysqli) == true) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Register Yourself</title>
+    <title>Login</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
@@ -86,7 +86,8 @@ if (login_check($mysqli) == true) {
 
                 <div class="row">
                     <div class="text-center mb-3 col-md-12">
-                        <button type="submit" value="Login" class="btn btn-success btn-block btn-rounded z-depth-1"
+                        <button type="submit" value="Login"
+                            class="btn btn-lg btn-primary btn-block btn-rounded z-depth-1"
                             onclick="formhash(this.form, this.form.password);">Log In</button>
                     </div>
                 </div>
